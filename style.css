@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#cont {
+  padding: 0 20px;
+  background-color: skyblue;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pcontent {
+  font-size: 14px;
+}
+
+.box-nav {
+  height: 8vh;
+  width: 8vw;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Main container jisme box move karega */
+#box {
+  position: relative;        /* Important for absolute positioning */
+  height: 90vh;              /* Full screen area below navbar */
+  width: 100%;
+  background-color: #f0f0f0;
+  overflow: hidden;          /* Box container ke andar hi rahe */
+}
+
+/* Box that moves randomly */
+#box-click {
+  position: absolute;        /* Move freely inside #box */
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* ===== For Mobile Devices (up to 600px) ===== */
+@media (max-width: 600px) {
+  #box-click {
+    height: 80px;
+    width: 80px;
+    font-size: 14px;
+  }
+
+  #cont {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    
+  }
+
+  .right {
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .box-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pcontent {
+    font-size: 12px;
+  }
+}
+
+/* ===== For Very Small Phones (up to 480px) ===== */
+@media (max-width: 480px) {
+  #box-click {
+    height: 70px;
+    width: 70px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  #cont {
+    padding: 10px;
+  }
+
+  .box-nav {
+    width: 35px;
+    height: 35px;
+  }
+
+  .pcontent {
+    font-size: 11px;
+  }
+
+  #box {
+    height: 85vh;
+  }
+}
+
